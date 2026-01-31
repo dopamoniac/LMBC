@@ -1,6 +1,7 @@
 import { useState, useCallback, useEffect } from 'react';
 import { Toaster, toast } from 'sonner';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Analytics } from '@vercel/analytics/react';
 
 // Hooks
 import { useCart } from '@/hooks/useCart';
@@ -201,6 +202,9 @@ function App() {
 
 
       <BackToTop isVisible={showBackToTop} onClick={scrollToTop} />
+
+      {/* Vercel Web Analytics */}
+      <Analytics />
 
       {/* Loyalty Points Indicator */}
       <AnimatePresence>
