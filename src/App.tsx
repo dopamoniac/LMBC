@@ -1,6 +1,7 @@
 import { useState, useCallback, useEffect } from 'react';
 import { Toaster, toast } from 'sonner';
 import { motion, AnimatePresence } from 'framer-motion';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 // Hooks
 import { useCart } from '@/hooks/useCart';
@@ -246,6 +247,9 @@ function App() {
           </motion.button>
         )}
       </AnimatePresence>
+      
+      {/* Vercel Speed Insights */}
+      <SpeedInsights />
     </div>
   );
 }
